@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>金融风京东卡页面</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="header">
+			<a href="https://www.tuandai.com" class="logo" target="_blank">
+				<img src="../images/logo.png" alt="团贷网">
+			</a>
+		</div>
+		<div class="bg">
+			<div class="wid-1200 banner-box">
+				<div class="banner1 leftmove">
+					<img src="../images/banner1.png" alt="" />
+				</div>
+				<div class="banner2 topmove">
+					<img src="../images/shield.png" alt="盾牌" class="shield" />
+					<img src="../images/light.png" alt="光圈" class="light lightflicker">
+				</div>
+				<div class="banner3 bottommove">
+					<img src="../images/banner3.png" alt="" />
+				</div>
+				<div class="login-box rightmove">
+					<div class="title">12.6%参考年回报率</div>
+					<form class="regist-form">
+						<div class="input-group">
+							<span class="icon phoneIcon"></span>
+							<input type="text" id="phone" class="form-control" placeholder="请输入手机号码">
+							<p class="phone-error error-msg color-red"></p>
+						</div>
+						<div class="input-group">
+							<span class="icon pwdIcon"></span>
+							<input type="text" id="pwd" class="form-control" placeholder="密码由6-16个字符(字母+数字)">
+							<p class="pwd-error error-msg color-red"></p>
+						</div>
+						<div class="input-group">
+							<span class="icon imgcodeIcon"></span>
+							<input type="text" id="imgcode" class="form-control" placeholder="图形验证码" style="width: 60%;">
+							<img src="" alt="图形验证码"  class="code-img"/>
+							<p class="imgcode-error error-msg color-red"></p>
+						</div>
+						<div class="input-group">
+							<span class="icon telcodeIcon"></span>
+							<input type="text" id="identifycode" class="form-control" placeholder="手机验证码" style="width: 60%;">
+							<button class="btn identify-code">获取验证码</button>
+							<p class="telcode-error error-msg color-red"></p>
+						</div>
+						<div class="input-group checkbox-item color999">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"> 我已阅读并同意《
+									<a href="//contract.tuandai.com/P2P/web/contractTypeService.aspx" class="tuan-word color-red" target="_blank">团贷网服务协议</a>》
+								</label>
+							</div>
+						</div>
+						<div class="input-group regist-btn">
+							<button type="button" class="btn btn-default btn-block">注册领红包</button>
+						</div>
+						<p class="tip-msg color999">已有账号，请
+							<a class="color-red" href="//www.tuandai.com/user/login.aspx">登录</a>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wid-1200">
+			<!-- 新手福利 -->
+			<div class="novice-welfare">
+				<h3 class="novice-welfare-title">新手福利</h3>
+				<div class="row text-center pt10">
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+						<img class="icenter-block floatmove" src="../images/welfare1.png" alt="518新手红包">
+						<p class="txt">518新手红包</p>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+						<img class="center-block floatmove" src="../images/welfare2.png" alt="800元京东卡">
+						<p class="txt">800元京东卡</p>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+						<img class="center-block floatmove" src="../images/welfare3.png" alt="2888元体验金">
+						<p class="txt">2888元体验金</p>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+						<img class="center-block floatmove" src="../images/welfare4.png" alt="1个月超级会员">
+						<p class="txt">1个月超级会员</p>
+					</div>
+				</div>
+			</div>
+			<!-- 热门推荐 -->
+			<div class="hot-recommend">
+				<h3 class="hot-recommend-title">热门推荐
+					<small>优先投标，快人一步</small>
+				</h3>
+				<div class="row text-center">
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 bLeft">
+						<a class="recommend-item mouseover-shadow" href="#" target="_blank">
+							<h4 class="item-title">新手专享3个月</h4>
+							<div class="item-subject-rate">
+								<p class="big-text text-orange">11
+									<small class="fz18">% </small>
+								</p>
+								<p class="refer">参考年回报率</p>
+							</div>
+							<div class="item-progress">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="subject-limit fz12">
+								<p class="color999 pull-left">期限：
+									<span class="color333">3个月</span>
+								</p>
+								<p class="color999 pull-right">剩余：
+									<span class="color333">428.6万</span>
+								</p>
+							</div>
+							<div class="btn join-btn">
+								<span class="btn-text">加入服务</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 bLeft">
+						<a class="recommend-item mouseover-shadow" href="#" target="_blank">
+							<h4 class="item-title">新手专享1个月</h4>
+							<div class="item-subject-rate">
+								<p class="big-text text-orange">11
+									<small class="fz18">% </small>
+								</p>
+								<p class="refer">参考年回报率</p>
+							</div>
+							<div class="item-progress">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="subject-limit fz12">
+								<p class="color999 pull-left">期限：
+									<span class="color333">1个月</span>
+								</p>
+								<p class="color999 pull-right">剩余：
+									<span class="color333">428.6万</span>
+								</p>
+							</div>
+							<div class="btn join-btn">
+								<span class="btn-text">加入服务</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 bLeft">
+						<a class="recommend-item mouseover-shadow" href="#" target="_blank">
+							<h4 class="item-title">新手专享15天</h4>
+							<div class="item-subject-rate">
+								<p class="big-text text-orange">11
+									<small class="fz18">% </small>
+								</p>
+								<p class="refer">参考年回报率</p>
+							</div>
+							<div class="item-progress">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="subject-limit fz12">
+								<p class="color999 pull-left">期限：
+									<span class="color333">15天</span>
+								</p>
+								<p class="color999 pull-right">剩余：
+									<span class="color333">428.6万</span>
+								</p>
+							</div>
+							<div class="btn join-btn">
+								<span class="btn-text">加入服务</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 bLeft">
+						<a class="recommend-item mouseover-shadow" href="#" target="_blank">
+							<h4 class="item-title">We自助服务C</h4>
+							<div class="item-subject-rate">
+								<p class="big-text text-orange">11
+									<small class="fz18">% </small>
+								</p>
+								<p class="refer">参考年回报率</p>
+							</div>
+							<div class="item-progress">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="subject-limit fz12">
+								<p class="color999 pull-left">期限：
+									<span class="color333">12个月</span>
+								</p>
+								<p class="color999 pull-right">剩余：
+									<span class="color333">428.6万</span>
+								</p>
+							</div>
+							<div class="btn join-btn">
+								<span class="btn-text">加入服务</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 团贷优势 -->
+			<div class="td-advantage">
+				<h3 class="td-advantage-title">团贷优势</h3>
+				<div class="advantage">
+					<div class="rank breath1">
+						<div class="fz19 color-blue tit">前
+							<span class="fz42">10</span>
+						</div>
+						<p class="desc fz17 detail">网贷之家排名前十</p>
+					</div>
+					<div class="stock breath2">
+						<div class="color-blue tit">
+							<span class="fz45">A</span>
+							<span class="fz24">股</span>
+						</div>
+						<p class="fz17 detail">上市公司战略合作</p>
+					</div>
+					<div class="grade breath3">
+						<div class="color-blue text-center tit">
+							<span class="fz36">三级</span>
+							<p class="fz24">等保</p>
+						</div>
+						<p class="detail fz17">信息安全等级保护三级认证</p>
+					</div>
+					<div class="num breath4">
+						<div class="fz19 color-blue text-center tit">
+							<span class="fz34">780</span>
+							<p class="fz20">万</p>
+						</div>
+						<p class="detail fz17">投资者信赖之选</p>
+					</div>
+					<div class="profess breath5">
+						<div class="color-blue text-center tit">
+							<span class="fz26 fb">专业</span>
+							<p class="fz18">认证</p>
+						</div>
+						<p class="detail fz17">AAA级信用认证</p>
+					</div>
+					<div class="control breath6">
+						<div class="color-blue tit">
+							<span class="fz26 fb">严格</span>
+							<p class="fz18">风控</p>
+						</div>
+						<p class="detail fz17">大数据智能风控</p>
+					</div>
+				</div>
+			</div>
+			<!-- 发展历程 -->
+			<div class="develop-history">
+				<h3 class="develop-history-title">发展历程</h3>
+				<div class="row">
+					<dl class="develops">
+						<dd>
+							<div class="time">
+								2012.07.15
+							</div>
+							<div class="point">
+								<em class=""></em>
+							</div>
+							<div class="event">
+								<div class="event-wrapper">
+									<div class="event-title">团贷网平台正式上线运营;</div>
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="time">
+								2013.11.01
+							</div>
+							<div class="icon point">
+								<em class=""></em>
+							</div>
+							<div class="event">
+								<div class="event-wrapper">
+									<div class="event-title">团贷网成为业内首家注册资本1亿元人民币的股份制网贷平台;</div>
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="time">
+								2014.07.01
+							</div>
+							<div class="icon point">
+								<em class=""></em>
+							</div>
+							<div class="event">
+								<div class="event-wrapper">
+									<div class="event-title">团贷网成为中华人民共和国公安部信息安全等级保护三级权威认证;</div>
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="time">
+								2016.03.25
+							</div>
+							<div class="icon point">
+								<em class=""></em>
+							</div>
+							<div class="event">
+								<div class="event-wrapper">
+									<div class="event-title">团贷网成为中国互联网金融协会首批会员单位;</div>
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="time">
+								2017.04.20
+							</div>
+							<div class="icon point">
+								<em class=""></em>
+							</div>
+							<div class="event">
+								<div class="event-wrapper">
+									<div class="event-title">团贷网荣获“存管上线平台品牌知名度十强”称号;</div>
+								</div>
+							</div>
+						</dd>
+						<dd>
+							<div class="time">
+								2017.10.20
+							</div>
+							<div class="icon point">
+								<em class=""></em>
+							</div>
+							<div class="event">
+								<div class="event-wrapper">
+									<div class="event-title">团贷网与万和集团旗下上市公司鸿特精密达成战略合作;</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 注册领红包 -->
+			<div class="bonus">
+				<div class="row text-center">
+					<a href="#">
+						<button class="btn bonus-btn">马上注册领红包</button>
+					</a>
+					<div class="bonus-tips colorC5 fz13">
+						投资对应金额可提取518元现金红包，规则详看官网“新手福利”说明
+						<br/> 投资有风险，入市需谨慎，最终收益以实际为准。
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="mid">
+				<div class="foot-msg">
+					<p>2010-2018 版权所有 © 团贷网 粤ICP备12043601号-1
+						<br> 地址：东莞市南城街道莞太路111号民间金融大厦1号楼28楼
+						<br> 东莞团贷网互联网科技服务有限公司
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="newcomer-packet">
+		<div class="mask"></div>
+		<div class="box">
+			<div class="box-title">
+				新手红包使用规则
+				<span class="close"><i></i></span>
+			</div>
+			<div class="box-body">
+
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/index.js"></script>
+</html>
