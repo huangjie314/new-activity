@@ -32,7 +32,7 @@ $(function () {
                     msgBox.html("");
                     return true;
                 } else {
-                    msgBox.html("密码格式错误，必须为6-16个字符（包含字母+数字）");
+                    msgBox.html("密码格式错误，必须为6-16个字符(包含字母+数字)");
                     return false;
                 }
             }
@@ -77,4 +77,34 @@ $(function () {
 
         }
     });
+
+    // 弹窗
+    $('#packet').on('click', function(){
+        $('.newcomer-packet').css('display','block');
+    }) 
+    $('#jdcard').on('click', function(){
+        $('.jdcard-rule').css('display','block');
+    }) 
+    $('#bbin').on('click',function(){
+        $('.newcomer-bbin').css('display','block');
+    })
+    $('#member').on('click', function(){
+        $('.member-rights').css('display','block');
+    })
+    $('.newcomer-packet').on('click', '.close', function(){
+        var $box = $('.newcomer-packet');
+        $box.css('display','none');
+    })
+    $('.jdcard-rule').on('click', '.close', function(){
+        var $box = $('.jdcard-rule');
+        $box.css('display','none');
+    })
+    $('.newcomer-bbin').on('click', '.close', function(){
+        var $box = $('.newcomer-bbin');
+        $box.css('display','none');
+    })
+    $('.member-rights').on('click', '.close', function(){
+        var $box = $('.member-rights');
+        $box.css('display','none');
+    })
 });

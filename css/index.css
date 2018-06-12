@@ -32,6 +32,9 @@ a:hover{color:#000;text-decoration:none;}
 .pt10 {
 	padding-top:10px;
 }
+.pt15 {
+	padding-top:15px;
+}
 .pt20 {
 	padding-top:20px;
 }
@@ -84,6 +87,9 @@ a:hover{color:#000;text-decoration:none;}
 .color333 {
 	color: #333;
 }
+.color888 {
+	color:#888888;
+}
 .color999 {
 	color: #999;
 }
@@ -99,6 +105,9 @@ a.color-red:hover {
 .color-blue {
 	color:#1771ff
 }
+.color-orange {
+	color: #ffa04b;
+}
 .bLeft {
 	border-left:1px solid #ebebeb;
 }
@@ -107,74 +116,95 @@ a.color-red:hover {
 	animation:rightmove 1s ease both;
 	-webkit-animation:rightmove 1s ease both;
 	-moz-animation:rightmove 1s ease both;
+	-ms-animation:rightmove 1s ease both;
 }
 @keyframes rightmove{
-    0%{opacity:0;transform:translate(100px,0px)}
-    100%{opacity:1;transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);transform:translate(100px,0px)}
+    100%{opacity:1; filter:alpha(opacity=100);transform:translate(0,0)}
 }
 @-webkit-keyframes rightmove{
-    0%{opacity:0;-webkit-transform:translate(100px,0px)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-webkit-transform:translate(100px,0px)}
+    100%{opacity:1; filter:alpha(opacity=100);-webkit-transform:translate(0,0)}
 }
 @-moz-keyframes rightmove{
-    0%{opacity:0;-webkit-transform:translate(100px,0px)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-moz-transform:translate(100px,0px)}
+    100%{opacity:1; filter:alpha(opacity=100);-moz-transform:translate(0,0)}
+}
+@-ms-keyframes rightmove{
+    0%{opacity:0; filter:alpha(opacity=0);-ms-transform:translate(100px,0px)}
+    100%{opacity:1; filter:alpha(opacity=100);-ms-transform:translate(0,0)}
 }
 .topmove {
 	animation:topmove 1.2s ease both;
 	-webkit-animation:topmove 1.2s ease both;
 	-moz-animation:topmove 1.2s ease both;
+	-ms-animation:topmove 1.2s ease both;
 }
 @keyframes topmove{
-    0%{opacity:0;transform:translate(0,-100px)}
-    100%{opacity:1;transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);transform:translate(0,-100px)}
+    100%{opacity:1; filter:alpha(opacity=100);transform:translate(0,0)}
 }
 @-webkit-keyframes topmove{
-    0%{opacity:0;-webkit-transform:translate(0,-100px)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-webkit-transform:translate(0,-100px)}
+    100%{opacity:1; filter:alpha(opacity=100);-webkit-transform:translate(0,0)}
 }
 @-moz-keyframes topmove{
-    0%{opacity:0;-webkit-transform:translate(0,-100px)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-moz-transform:translate(0,-100px)}
+    100%{opacity:1; filter:alpha(opacity=100);-moz-transform:translate(0,0)}
+}
+@-ms-keyframes topmove{
+    0%{opacity:0; filter:alpha(opacity=0);-ms-transform:translate(0,-100px)}
+    100%{opacity:1; filter:alpha(opacity=100);-ms-transform:translate(0,0)}
 }
 .leftmove {
 	animation:leftmove 1.2s ease both;
 	-webkit-animation:leftmove 1.2s ease both;
 	-moz-animation:leftmove 1.2s ease both;
+	-ms-animation:leftmove 1.2s ease both;
 }
 @keyframes leftmove{
-    0%{opacity:0;transform:translate(100px,0)}
-    100%{opacity:1;transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);transform:translate(100px,0)}
+    100%{opacity:1; filter:alpha(opacity=100);transform:translate(0,0)}
 }
 @-webkit-keyframes leftmove{
-    0%{opacity:0;-webkit-transform:translate(100px,0)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-webkit-transform:translate(100px,0)}
+    100%{opacity:1; filter:alpha(opacity=100);-webkit-transform:translate(0,0)}
 }
 @-moz-keyframes leftmove{
-    0%{opacity:0;-webkit-transform:translate(100px,0)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-moz-transform:translate(100px,0)}
+    100%{opacity:1; filter:alpha(opacity=100);-moz-transform:translate(0,0)}
+}
+@-ms-keyframes leftmove{
+    0%{opacity:0; filter:alpha(opacity=0);-ms-transform:translate(100px,0)}
+    100%{opacity:1; filter:alpha(opacity=100);-ms-transform:translate(0,0)}
 }
 .bottommove {
 	animation:bottommove 1.2s ease both;
 	-webkit-animation:bottommove 1.2s ease both;
 	-moz-animation:bottommove 1.2s ease both;
+	-ms-animation:bottommove 1.2s ease both;
 }
 @keyframes bottommove{
-    0%{opacity:0;transform:translate(0,100px)}
-    100%{opacity:1;transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);transform:translate(0,100px)}
+    100%{opacity:1; filter:alpha(opacity=100);transform:translate(0,0)}
 }
 @-webkit-keyframes bottommove{
-    0%{opacity:0;-webkit-transform:translate(0,100px)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-webkit-transform:translate(0,100px)}
+    100%{opacity:1; filter:alpha(opacity=100);-webkit-transform:translate(0,0)}
 }
 @-moz-keyframes bottommove{
-    0%{opacity:0;-webkit-transform:translate(0,100px)}
-    100%{opacity:1;-webkit-transform:translate(0,0)}
+    0%{opacity:0; filter:alpha(opacity=0);-moz-transform:translate(0,100px)}
+    100%{opacity:1; filter:alpha(opacity=100);-moz-transform:translate(0,0)}
+}
+@-ms-keyframes bottommove{
+    0%{opacity:0; filter:alpha(opacity=0);-ms-transform:translate(0,100px)}
+    100%{opacity:1; filter:alpha(opacity=100);-ms-transform:translate(0,0)}
 }
 .floatmove{
-	animation:floatmove 2s ease-in-out infinite alternate both;
-	-webkit-animation:floatmove 2s ease-in-out infinite alternate both;
-	-moz-animation:floatmove 2s ease-in-out infinite alternate both;
+	animation:floatmove 2.5s ease-in-out infinite alternate both;
+	-webkit-animation:floatmove 2.5s ease-in-out infinite alternate both;
+	-moz-animation:floatmove 2.5s ease-in-out infinite alternate both;
+	-ms-animation:floatmove 2.5s ease-in-out infinite alternate both;
 }
 @keyframes floatmove {
     0%{transform:translate(0px,-10px);}
@@ -185,15 +215,19 @@ a.color-red:hover {
     100%{-webkit-transform:translate(0px,10px)}
 }
 @-moz-keyframes floatmove {
-    0%{-webkit-transform:translate(0px,-10px)}
-    100%{-webkit-transform:translate(0px,10px)}
+    0%{-moz-transform:translate(0px,-10px)}
+    100%{-moz-transform:translate(0px,10px)}
 }
-.breath1{animation:breath 1.5s ease-in-out infinite alternate both;-webkit-animation:breath 1.5s ease-in-out infinite alternate both;-moz-animation:breath 1.5s ease-in-out infinite alternate both; }
-.breath2{animation:breath 1.8s .3s ease-in-out infinite alternate both;-webkit-animation:breath 1.8s .3s ease-in-out infinite alternate both;-moz-animation:breath 1.8s .3s ease-in-out infinite alternate both; }
-.breath3{animation:breath 2s .6s ease-in-out infinite alternate both;-webkit-animation:breath 2s .6s ease-in-out infinite alternate both;-moz-animation:breath 2s .6s ease-in-out infinite alternate both; }
-.breath4{animation:breath 1.7s .1s ease-in-out infinite alternate both;-webkit-animation:breath 1.7s .1s ease-in-out infinite alternate both; -moz-animation:breath 1.7s .1s ease-in-out infinite alternate both;}
-.breath5{animation:breath 1.5s .1s ease-in-out infinite alternate both;-webkit-animation:breath 1.5s .1s ease-in-out infinite alternate both; -moz-animation:breath 1.5s .1s ease-in-out infinite alternate both;}
-.breath6{animation:breath 2s ease-in-out infinite alternate both;-webkit-animation:breath 2s ease-in-out infinite alternate both; -moz-animation:breath 2s ease-in-out infinite alternate both; }
+@-ms-keyframes floatmove {
+    0%{-ms-transform:translate(0px,-10px)}
+    100%{-ms-transform:translate(0px,10px)}
+}
+.breath1{animation:breath 1.5s ease-in-out infinite alternate both;-webkit-animation:breath 1.5s ease-in-out infinite alternate both;-moz-animation:breath 1.5s ease-in-out infinite alternate both; -ms-animation:breath 1.5s ease-in-out infinite alternate both;}
+.breath2{animation:breath 1.8s .3s ease-in-out infinite alternate both;-webkit-animation:breath 1.8s .3s ease-in-out infinite alternate both;-moz-animation:breath 1.8s .3s ease-in-out infinite alternate both; -ms-animation:breath 1.8s .3s ease-in-out infinite alternate both;}
+.breath3{animation:breath 2s .6s ease-in-out infinite alternate both;-webkit-animation:breath 2s .6s ease-in-out infinite alternate both;-moz-animation:breath 2s .6s ease-in-out infinite alternate both;-ms-animation:breath 2s .6s ease-in-out infinite alternate both; }
+.breath4{animation:breath 1.7s .1s ease-in-out infinite alternate both;-webkit-animation:breath 1.7s .1s ease-in-out infinite alternate both; -moz-animation:breath 1.7s .1s ease-in-out infinite alternate both;-ms-animation:breath 1.7s .1s ease-in-out infinite alternate both;}
+.breath5{animation:breath 1.5s .1s ease-in-out infinite alternate both;-webkit-animation:breath 1.5s .1s ease-in-out infinite alternate both; -moz-animation:breath 1.5s .1s ease-in-out infinite alternate both;-ms-animation:breath 1.5s .1s ease-in-out infinite alternate both;}
+.breath6{animation:breath 2s ease-in-out infinite alternate both;-webkit-animation:breath 2s ease-in-out infinite alternate both; -moz-animation:breath 2s ease-in-out infinite alternate both;-ms-animation:breath 2s ease-in-out infinite alternate both; }
 @keyframes breath {
     0%{transform:translate(0px,-10px);}
     100%{transform:translate(0px,10px);}
@@ -203,25 +237,34 @@ a.color-red:hover {
     100%{-webkit-transform:translate(0px,10px)}
 }
 @-moz-keyframes breath {
-    0%{-webkit-transform:translate(0px,-10px)}
-    100%{-webkit-transform:translate(0px,10px)}
+    0%{-moz-transform:translate(0px,-10px)}
+    100%{-moz-transform:translate(0px,10px)}
+}
+@-ms-keyframes breath {
+    0%{-ms-transform:translate(0px,-10px)}
+    100%{-ms-transform:translate(0px,10px)}
 }
 .lightflicker{
 	animation:flicker 1.5s ease-in-out infinite alternate both;
 	-webkit-animation:flicker 1.5s ease-in-out infinite alternate both;
 	-moz-animation:flicker 1.5s ease-in-out infinite alternate both;
+	-ms-animation:flicker 1.5s ease-in-out infinite alternate both;
 }
 @keyframes flicker {
-    0%{opacity:0;}
-    100%{opacity:1;}
+    0%{opacity:0; filter:alpha(opacity=0);}
+    100%{opacity:1; filter:alpha(opacity=100);}
 }
 @-webkit-keyframes flicker {
-    0%{opacity:0;}
-    100%{opacity:1;}
+    0%{opacity:0; filter:alpha(opacity=0);}
+    100%{opacity:1; filter:alpha(opacity=100);}
 }
 @-moz-keyframes flicker {
-    0%{opacity:0;}
-    100%{opacity:1;}
+    0%{opacity:0; filter:alpha(opacity=0);}
+    100%{opacity:1; filter:alpha(opacity=100);}
+}
+@-ms-keyframes flicker {
+    0%{opacity:0; filter:alpha(opacity=0);}
+    100%{opacity:1; filter:alpha(opacity=100);}
 }
 /*animation end*/
 html,body{
@@ -251,7 +294,7 @@ html,body{
 /*banner*/
 .bg .banner-box .banner1 {position: absolute;top:10%;left: 0;}
 .bg .banner-box .banner2 {position: absolute;top:0.2%;left: 36.7%; background: url(../images/banner2.png) center no-repeat;height: 379px;width: 417px;}
-.bg .banner-box .banner2 > .shield {position: absolute;top: 71px;left: 109px;
+.bg .banner-box .banner2 > .shield {position: absolute;top: 90px;left: 109px;
 	animation:floatmove 1.5s ease-in-out infinite alternate both;
 	-webkit-animation:floatmove 1.5s ease-in-out infinite alternate both;
 	-moz-animation:floatmove 1.5s ease-in-out infinite alternate both;
@@ -303,25 +346,23 @@ html,body{
 .bg .login-box .regist-form .input-group .icon{
 	position: absolute;
 	z-index: 10;
-	padding-left: 12px;
-    height: 34px;
-	width: 34px;
-	top:7px;
-	left: 12px;
+    height: 24px;
+	width: 18px;
+	/* margin: 5px 0 5px 10px; */
+	left:10px;
+	margin: 5px 0; 
 }
 .icon.phoneIcon{
-	background: url(../images/phone.png) no-repeat;
-	top: 5px!important;
+	background: url(../images/phone.png) center no-repeat;
 }
 .icon.pwdIcon{
-	background: url(../images/password.png) no-repeat;
+	background: url(../images/password.png) center no-repeat;
 }
 .icon.imgcodeIcon {
-	background: url(../images/code.png) no-repeat;
+	background: url(../images/code.png) center no-repeat;
 }
 .icon.telcodeIcon {
-	top:9px!important;
-	background: url(../images/code2.png) no-repeat;
+	background: url(../images/code2.png) center no-repeat;
 }
 .code-img {
 	position: absolute;
@@ -440,6 +481,11 @@ html,body{
     background: -moz-linear-gradient(170deg, rgba(255,135,50,.5), rgba(255,135,50,1));
     background: linear-gradient(170deg, rgba(255,135,50,.5), rgba(255,135,50,1));
 }
+.hot-recommend .join-btn.filled {
+	background: transparent;
+	color: #999;
+	border:1px solid #ebebeb;
+}
 /*团贷优势*/
 .advantage {
 	height: 517px;
@@ -450,6 +496,7 @@ html,body{
 .advantage>div{
 	position: absolute;
 	text-align: center;
+	transition: all
 }
 .advantage .rank {
 	top:228px;
@@ -460,7 +507,7 @@ html,body{
 	width: 109px;
 	text-align: center;
 	line-height: 109px;
-	background: url(../images/circle1.png) no-repeat;
+	background: url(../images/circle1.png) center no-repeat;
 	margin:auto;
 }
 .advantage .stock {
@@ -613,21 +660,27 @@ html,body{
 .footer .foot-msg{width:100%;height:100%;background:url("../images/foot.png?v=20180403001") no-repeat center;position:absolute;left:0px;top:0px;}
 .footer .foot-msg p{position: absolute;font-size: 14px;color: #7a7a7a;line-height: 26px; left: 543px; top: 44px;}
 /*弹窗*/
-.newcomer-packet {
+.newcomer-packet,
+.jdcard-rule,
+.newcomer-bbin,
+.member-rights {
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right:0;
 	z-index: 99;
+	display: none;
 }
-.box {
+.box-body {
 	width: 836px;
 	height: 650px;
 	position: relative;
 	top:50%;
 	margin: auto;
+	margin-top:-325px;
 	border-radius: 4px;
+	background: #fff;
 }
 .box-title{
 	background: #5896fe;
@@ -636,6 +689,8 @@ html,body{
 	color: #fff;
 	text-align: center;
 	padding: 10px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 }
 .box-title .close {
 	height: 28px;
@@ -650,5 +705,62 @@ html,body{
 	bottom: 0;
 	left: 0;
 	right: 0;
+	background: #000;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
 	background-color:rgba(0,0,0,.5);
+}
+.box-content {
+	padding: 30px 25px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.box-content .tab {
+	padding: 15px 35px;
+}
+.box-content .tab table {
+	width: 100%;
+	text-align: center;
+}
+.box-content table th, .box-content table td{
+	text-align: center;
+	border: 1px solid #a3a2a3;
+	color: #a3a2a3;
+	padding: 12px 0; 
+}
+.box-content .desc{
+	line-height: 28px;
+}
+.box-content .desc .item {
+	padding-left:40px;
+	position: relative;
+}
+.box-content .desc .item .order {
+	position: absolute;
+	left:0;
+}
+.member-rights .box-body {
+	width: 1200px;
+}
+.box-content .rights-items {
+	text-align: left;
+	display: inline-block;
+	margin-bottom: 30px;
+	width: 50%;
+	padding:0 15px;
+	float: left;
+}
+.box-content .rights-items .article {
+	padding: 30px;
+	background: #f7f7f7;
+	position: relative;
+	padding-left: 130px;
+}
+.box-content .rights-items img {
+	position: absolute;
+	left: 30px;
+	max-width: 80px;
+	height: auto;
+	margin:auto;
 }
