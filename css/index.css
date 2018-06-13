@@ -313,6 +313,7 @@ html,body{
 }
 .bg .login-box .title{
 	font-size: 24px;
+	font-weight: 700;
 	text-align: center;
 	letter-spacing:2px;
 	background-color: #ff4151;
@@ -327,6 +328,18 @@ html,body{
 .bg .login-box .regist-form .input-group{
 	margin-bottom: 15px;
 	width: 100%;
+}
+.bg .login-box .regist-form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {     
+   font-size: 14px;   
+}   
+.bg .login-box .regist-form input:-moz-placeholder, textarea:-moz-placeholder {    
+	font-size: 14px;   
+}   
+.bg .login-box .regist-form input::-moz-placeholder, textarea::-moz-placeholder {   
+	font-size: 14px;  
+}   
+.bg .login-box .regist-form input:-ms-input-placeholder, textarea:-ms-input-placeholder {    
+	font-size: 14px;   
 }
 .bg .login-box .regist-form .checkbox-item{
 	margin-bottom: 5px;
@@ -438,16 +451,18 @@ html,body{
 	color: #333;
 }
 .hot-recommend .recommend-item .item-subject-rate{
-	margin-top: 24px;
+	margin-top: 30px;
+	line-height: 1.1;
 }
 .hot-recommend .recommend-item .item-subject-rate .big-text {
-	font-size: 48px;
-	height: 54px;
-    line-height: 48px;
-    color: #ff7800;
+	font-size: 60px;
+	/* height: 54px; */
+    /* line-height: 48px; */
+	color: #ff4151;
+	word-spacing: -16px;
 }
 .hot-recommend .recommend-item .item-subject-rate .big-text > small {
-	font-size: 18px;
+	font-size: 26px;
 }
 .hot-recommend .recommend-item .item-subject-rate .refer {
 	font-size: 12px;
@@ -493,10 +508,13 @@ html,body{
 	background: url(../images/advantage.png) center center no-repeat;
 	position: relative;
 }
-.advantage>div{
+.advantage .advan-item{
 	position: absolute;
 	text-align: center;
 	transition: all
+}
+.advantage .advan-item .detail{
+	color:#101010;
 }
 .advantage .rank {
 	top:228px;
@@ -577,9 +595,9 @@ html,body{
 /*发展历程*/
 .develop-history .develops{
 	position: relative;
-    margin: 0 0 60px 199px;
-    padding-top: 30px;
-    width: 550px;
+    margin: 0 0 60px 232px;
+	padding-top: 30px;
+	/* width: 550px; */
 }
 .develop-history .develops dd {
 	position: relative;
@@ -597,14 +615,13 @@ html,body{
 }
 .develop-history .develops .time{
 	position: absolute;
-    left: -148px;
+    left: -142px;
     top: -12px;
     width: 120px;
     height: 25px;
     line-height: 25px;
-    color: #333;
-    font-size: 20px;
-    text-align: right;
+    color: #3e3a39;
+    font-size: 18px;
 }
 .develop-history .develops dd:first-child .point{
 	margin-top: 34px;
@@ -623,7 +640,8 @@ html,body{
 .develop-history .event .event-wrapper{
 	height: 25px;
     line-height: 25px;
-    font-size: 16px;
+	font-size: 18px;
+	color: #101010;
     border-top: 1px solid #ff848e;
 }
 .develop-history .event .event-wrapper .event-title{
@@ -631,7 +649,7 @@ html,body{
     top: -13px;
     margin-left: 34px;
     padding-left: 27px;
-    background: #fff;
+	background: #fff;
 }
 /* 注册领红包 */
 .bonus {
@@ -723,6 +741,9 @@ html,body{
 	width: 100%;
 	text-align: center;
 }
+.box-content table th {
+	background: #f4f4f4;
+}
 .box-content table th, .box-content table td{
 	text-align: center;
 	border: 1px solid #a3a2a3;
@@ -746,9 +767,9 @@ html,body{
 .box-content .rights-items {
 	text-align: left;
 	display: inline-block;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	width: 50%;
-	padding:0 15px;
+	padding:0 10px;
 	float: left;
 }
 .box-content .rights-items .article {
