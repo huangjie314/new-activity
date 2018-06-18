@@ -31,29 +31,29 @@
 				</div>
 				<div class="login-box rightmove">
 					<div class="title">12.6%参考年回报率</div>
-					<form class="regist-form" autocomplete="off">
+					<form class="regist-form" id="regist-form" autocomplete="off">
 						<div class="input-group">
 							<span class="icon phoneIcon"></span>
-							<input type="text" id="phone" class="form-control" placeholder="请输入手机号码" autocomplete="off" maxlength="11">
+							<input type="text" data-flag="phone" id="phone" class="form-control" placeholder="请输入手机号码" autocomplete="off" maxlength="11">
 							<span></span>
-							<p class="phone-error error-msg color-red"></p>
+							<p class="phone-error msg color-red"></p>
 						</div>
 						<div class="input-group">
 							<span class="icon pwdIcon"></span>
-							<input type="password" id="pwd" class="form-control" placeholder="密码由6-16个字符(字母+数字)" autocomplete="off" maxlength="16">
-							<p class="pwd-error error-msg color-red"></p>
+							<input type="password" data-flag="password" id="pwd" class="form-control" placeholder="密码由6-16个字符(字母+数字)" autocomplete="off" maxlength="16">
+							<p class="pwd-error msg color-red"></p>
 						</div>
 						<div class="input-group">
 							<span class="icon imgcodeIcon"></span>
-							<input type="text" id="imgcode" class="form-control" placeholder="图形验证码" style="width: 60%;" autocomplete="off" maxlength="4">
+							<input type="text" id="imgcode" data-flag="imgcode" class="form-control" placeholder="图形验证码" style="width: 60%;" autocomplete="off" maxlength="4">
 							<img src="https://tg.tuandai.com/ajaxhander/ValidateCode.ashx" alt="图形验证码" class="code-img" />
-							<p class="imgcode-error error-msg color-red"></p>
+							<p class="imgcode-error msg color-red"></p>
 						</div>
 						<div class="input-group">
 							<span class="icon telcodeIcon"></span>
-							<input type="text" id="identifycode" class="form-control" placeholder="手机验证码" style="width: 60%;" autocomplete="off" maxlength="6">
+							<input type="text" id="identifycode" data-flag="identifycode" class="form-control" placeholder="手机验证码" style="width: 60%;" autocomplete="off" maxlength="6">
 							<button type="button" class="btn identify-code">获取验证码</button>
-							<p class="telcode-error error-msg color-red"></p>
+							<p class="telcode-error msg color-red"></p>
 						</div>
 						<div class="input-group checkbox-item color999">
 							<div class="checkbox">
@@ -64,7 +64,7 @@
 							</div>
 						</div>
 						<div class="input-group regist-btn">
-							<button type="button" class="btn btn-default btn-block">注册领红包</button>
+							<button type="button" id="register-btn" class="btn btn-default btn-block">注册领红包</button>
 						</div>
 						<p class="tip-msg color999">已有账号，请
 							<a class="color-red" href="//www.tuandai.com/user/login.aspx">登录</a>

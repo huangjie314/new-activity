@@ -1,82 +1,143 @@
 $(function () {
+    var $regForm = $('#regist-form');
     var util = {
         Regex: {
             MOBILE: /^1\d{10}$/,
             ISCODE: /^[0-9]{6}$/i
+        },
+        changeRegState: function(state){
+            var $regBtn = $regForm.find('#register-btn');
+            if(state === 'registering') {
+                $regBtn.data('state', 'registering').text('注册中...');
+            } else {
+                $regBtn.data('state', null).text('注册领红包');
+            }
         }
     }
     var validateMethods = {
         phone: function (val) {
-            var msgBox = $('.phone-error');
+            var target = $regForm.find('#phone');
+            var val = target.val();
+            var msgBox = target.siblings('.msg');
             if ($.trim(val) != "") {
                 if (util.Regex.MOBILE.test(val)) {
-                    msgBox.html("");
+                    msgBox.html("").removeClass('error-msg');
                     return true;
                 } else {
-                    msgBox.html("输入手机号码格式不正确");
+                    msgBox.html("输入手机号码格式不正确").addClass('error-msg');
                     return false;
                 }
             } else {
-                msgBox.html("手机号码不能为空");
+                msgBox.html("手机号码不能为空").addClass('error-msg');
                 return false;
             }
         },
         password: function (val) {
-            var msgBox = $('.pwd-error');
+            var target = $regForm.find('#pwd');
+            var val = target.val();
+            var msgBox = target.siblings('.msg');
             if (val.indexOf(" ") > -1) {
-                msgBox.html("密码不允许含有空格");
+                msgBox.html("密码不允许含有空格").addClass('error-msg');
                 return false;
             }
             if ($.trim(val) != "") {
                 if (/^.*?[\d]+.*$/.test(val) && /^.*?[A-Za-z].*$/.test(val) && /^.{6,16}$/.test(val)) {
-                    msgBox.html("");
+                    msgBox.html("").removeClass('error-msg');
                     return true;
                 } else {
-                    msgBox.html("密码格式错误，必须为6-16个字符(包含字母+数字)");
+                    msgBox.html("密码格式错误，必须为6-16个字符(包含字母+数字)").addClass('error-msg');
                     return false;
                 }
             }
             else {
-                msgBox.html("密码不能为空");
+                msgBox.html("密码不能为空").addClass('error-msg');
                 return false;
             }
         },
         imgCode: function (val) {
-            var msgBox = $(".imgcode-error");
-            if ($.trim(imgCode) == "") {
-                msgBox.html("图形验证码不能为空");
+            var target = $regForm.find('#imgcode');
+            var val = target.val();
+            var msgBox = target.siblings('.msg');
+            if ($.trim(val) == "") {
+                msgBox.html("图形验证码不能为空").addClass('error-msg');
                 return false;
             } else {
-                msgBox.hide();
+                msgBox.html('').removeClass('error-msg');
                 return true;
             }
         },
         telCode: function (val) {
-            var msgBox = $('.telcode-error');
+            var target = $regForm.find('#identifycode');
+            var val = target.val();
+            var msgBox = target.siblings('.msg');
             if ($.trim(val) != "") {
                 if (util.Regex.ISCODE.test(val)) {
-                    msgBox.html("");
+                    msgBox.html("").removeClass('error-msg');
                     return true;
                 }  else {
-                    msgBox.html("验证码错误,请重新输入");
+                    msgBox.html("验证码错误,请重新输入").addClass('error-msg');
                     return false;
                 }
             } else {
-                msgBox.html("请输入验证码");
+                msgBox.html("请输入验证码").addClass('error-msg');
                 return false;
             }
         }
     }
+    var registAction = function(e){
+        e.preventDefault();
+        //注册请求中，防止多次点击导致多次发生请求
+        if($(this).data('state') === 'registering') {
+            return false;
+        }
+        $regForm.find('.form-control').each(function(){
+            var $this = $(this);
+            $this.trigger('blur');
+        });
+        var errorMsg = $regForm.find('.error-msg');
+        if(errorMsg.length > 0) { return ;}
 
-    $(".regist-btn").on("click", 'button', function(){
-        var PhoneVal = $("#phone").val();
-        var PwdVal = $('#pwd').val();
-        var ImgcodeVal = $('#imgcode').val();
-        var TelcodeVal = $('#identifycode').val();
-        if(validateMethods.phone(PhoneVal) && validateMethods.password(PwdVal) && validateMethods.imgCode(ImgcodeVal) && validateMethods.telCode(TelcodeVal)){
+        $.ajax({
+            url: '?t='+Math.random()*1000,
+            type: 'post',
+            data: $regForm.serialize(),
+            beforeSend: function(){
+                util.changeRegState('registering');
+            },
+            success: function(res){
+                if(res.success){
+                    location.href = "";
+                } else {
+                    util.changeRegState();
+                    alert(res.msg || '注册失败，请重新注册！');
+                }
+            },
+            error: function(){
+                util.changeRegState();
+                alert('注册失败，请重新注册！');
+            }
+        })
 
+    }
+
+    $regForm.on('blur', 'input.form-control', function(){
+        var $this = $(this);
+        var flag = $this.data('flag');
+        if(flag === 'phone') {
+            validateMethods.phone();
+        } else if(flag === 'password') {
+            validateMethods.password();
+        } else if(flag === 'imgcode') {
+            validateMethods.imgCode();
+        } else if(flag === 'identifycode') {
+            validateMethods.telCode();
         }
     });
+    $regForm.on('focus', 'input.form-control', function(){
+        var error = $(this).siblings('.msg');
+        error.html('').removeClass('error-msg');
+    });
+    $regForm.on('click', '#register-btn', registAction);
 
     // 弹窗
     $('#packet').on('click', function(){
